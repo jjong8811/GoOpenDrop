@@ -39,7 +39,7 @@ func StartOwlInterface(wlanDevName string, owlChannel string, OwlName string, lo
 	if s.Error != nil {
 		return s.Error
 	}
-	owlcmd := cmd.NewCmd("owl", "-i", wlanDevName, "-h", OwlName, "-c", owlChannel)
+	owlcmd := cmd.NewCmd("owl", "-i", wlanDevName, "-h", OwlName, "-c", owlChannel, "-N")
 	owlcmd.Stderr = nil
 	owlcmd.Stdout = nil
 
